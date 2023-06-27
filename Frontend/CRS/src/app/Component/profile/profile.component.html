@@ -1,0 +1,36 @@
+<div class="container mt-3 col-md-5 " *ngFor="let x of user">
+    <a routerLink="/Home"><i class="fa-solid fa-arrow-left"></i></a><h3>Hello {{x.fname}} <i class="fa-solid fa-circle-user"></i></h3>
+    <hr>
+    <div class="form-group">
+        <label for="userid">ID</label>
+        <input type="text" name="userid" id="userid" placeholder="Enter ID" class="form-control" value="{{x.id}}">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Enter email" class="form-control" value="{{x.useremail}} " >
+    </div>
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" name="Name" id="Name" placeholder="Enter Name" class="form-control" value="{{x.username }}" ></div>
+   
+    <div class="form-group">
+        <label for="City">City</label>
+        <input type="text" name="City" id="City" placeholder="Enter City" class="form-control" value="{{x.city}} " >
+    </div>
+    <div class="form-group">
+        <label for="District">District</label>
+        <input type="text" name="District" id="District" placeholder="Enter District" class="form-control" value="{{x.district}} " >
+    </div>
+    <div class="form-group">
+        <label for="State">State</label>
+        <input type="text" name="State" id="State" placeholder="Enter State" class="form-control" value="{{x.state}} " >
+    </div>
+    <div class="form-group">
+        <label for="pincode">Pincode</label>
+        <input type="text" name="pincode" id="pincode" placeholder="Enter pincode" class="form-control" value="{{x.pincode}} " >
+    </div>
+    <hr>
+    <button class="btn btn-primary" routerLink="/updateUser/{{x.useremail}}"><i class="fas fa-light fa-wrench"></i> &nbsp;Update</button>&nbsp;
+    <button class="btn btn-danger" (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
+
+</div>

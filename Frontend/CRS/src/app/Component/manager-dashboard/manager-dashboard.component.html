@@ -1,0 +1,20 @@
+<div class="container">
+  <h2 *ngFor="let n of man">Welcome {{n.managername}}</h2>
+   <h3>Total Complaints : {{Raised}}</h3>
+   <hr>
+   <div class="card" *ngFor="let m of manager, let i = index"> 
+    <div class="card-header">
+      Complaint 
+    </div>
+    <div class="card-body">
+        <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-{{color}}" style="width: 25%">{{process}}%</div>
+          </div>
+        
+      <h5 class="card-title"><span>{{i+1}}. </span>Status : {{m.status}}</h5>
+      <p class="card-text">Complaint : {{m.complaint}}</p>
+      <a routerLink="/assigntickets/{{m.id}}" class="btn btn-primary">Assign</a>
+    </div>
+  </div>
+  
+</div><br><br><br>

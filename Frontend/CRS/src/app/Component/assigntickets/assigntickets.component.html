@@ -1,0 +1,66 @@
+<div class="container">
+    <h3>Assign Complaint to Engineer</h3>
+    <div class="card"  >
+        <h5 class="card-header">Complaint</h5>
+        <div class="card-body">
+          <h5 class="card-title">Status : {{compl.status}}</h5>
+          <p class="card-text">Complaint: {{compl.complaint}}</p>
+          <div class="managerlist" >
+            <form  (ngSubmit)="onSubmit()">
+
+              <div    *ngFor="let m of man">
+                <div >
+                  <label for="validationDefaultUsername" class="form-label">Manager Name</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required value="{{m.managername}}">
+                  </div>
+                </div>
+                <div >
+                    <label for="validationDefaultUsername" class="form-label">Manager Email</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required value="{{m.managermail}}">
+                    </div>
+                  </div>
+              </div>&nbsp;&nbsp;
+              <div >
+                <div  >
+                  <label for="validationDefaultUsername" class="form-label">Engineer Name</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required >
+                  </div>
+                </div>
+                <div  >
+                    <label for="engineeremail" class="form-label">Engineer Email</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="engineeremail" aria-describedby="inputGroupPrepend2" name="engineeremail" required [(ngModel)]="com.engineermail">
+                    </div>
+                  </div>
+              </div>
+              <br>
+            <br>
+              <button class="btn btn-primary" >Send Mail</button> 
+            </form>
+            
+
+        </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="engineerslist" *ngFor="let e of engineers">
+        <h3>Engineers</h3>
+        <hr>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Name : {{e.engineername}}</div>
+              Email : {{e.engineermail}}
+            </div>
+            
+            <span class="badge bg-primary rounded-pill"><button class="btn btn-primary" (click)="assignEngineer(e.engineermail)">assign to {{e.engineername}}</button>&nbsp;</span>
+          </li>
+        </ol>
+      </div>
+  </div>
+

@@ -1,0 +1,35 @@
+<div class="container" *ngFor="let n of eng">
+    <h2 >Welcome {{n.engineername}}</h2>
+     <h3>Total Complaints : {{files.length}}</h3>
+     <hr>
+     <div class="card" *ngFor="let m of files, let i = index"> 
+      <div class="card-header">
+        {{i+1}}. Complaint 
+      </div>
+      <div class="card-body">
+          <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-danger" style="width: 55%">50%</div>
+            </div>
+            <br>
+            <form (ngSubmit)="onSubmit()"*ngFor="let n of eng"> 
+                <p class="card-text">Complaint : {{m.complaint}}</p> 
+                <div class="col-md-3">
+                    <label for="status" class="form-label">Status</label>
+                    <input type="text" class="form-control" id="status"name="status" [(ngModel)]="com.status">
+                  </div>
+        
+
+        
+        <div class="form-floating mt-10">
+            <label for="process">Updates</label>
+            <textarea class="form-control" name="process" placeholder="Leave a Complaint here" id="floatingTextarea2" style="width: 1000px;" [(ngModel)]="com.processUpdate">{{n.engineername}}</textarea>
+            
+        </div>
+       <br>
+       <br>
+        <button class="btn btn-primary">Update</button>
+    </form>
+      </div>
+    </div>
+    
+  </div><br><br><br>

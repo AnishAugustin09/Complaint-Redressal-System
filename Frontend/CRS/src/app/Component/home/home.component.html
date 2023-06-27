@@ -1,0 +1,56 @@
+<div class="container">
+    <h2>Raise a Complaint</h2>
+    <hr>
+    
+        <form class="row g-3" *ngFor="let u of user" (ngSubmit)="onSubmit()">
+            <div class="col-md-4">
+              <label for="validationDefaultUsername" class="form-label">Username</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required value="{{u.username}}">
+              </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">Email</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required value="{{u.useremail}}">
+                </div>
+              </div>
+            <div class="col-md-3">
+              <label for="validationDefault03" class="form-label">City</label>
+              <input type="text" class="form-control" id="validationDefault03" required value="{{u.city}}">
+            </div>
+            <div class="col-md-3">
+              <label for="validationDefault04" class="form-label">State</label>
+              <input type="text" class="form-control" id="validationDefault05" required value="{{u.state}}">
+            </div>
+            <div class="col-md-3">
+              <label for="validationDefault05" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="validationDefault05" required value="{{u.pincode}}">
+            </div>
+
+            
+            <div class="col-md-3">
+                <label for="status" class="form-label">Status</label>
+                <input type="text" class="form-control" id="status" required name="status" [(ngModel)]="com.status">
+            </div><br>
+            <div class="form-floating mt-10">
+                <label for="floatingTextarea2">Complaint</label>
+                <textarea class="form-control" name="complaint" placeholder="Leave a Complaint here" id="floatingTextarea2" style="width: 1000px;" [(ngModel)]="com.complaint"></textarea>
+                <br>
+                <br>
+                <button class="btn btn-primary" >Raise Ticket</button>
+            </div>
+            
+            <div class="raise">
+              
+            </div>
+             
+            
+            
+          </form>
+        
+           
+
+    
+
+</div>

@@ -1,0 +1,43 @@
+<div class="container ">
+    <div class="card">
+      <div class="card text-bg-light">
+       
+    
+        <div class="card-img-overlay" >
+      <h3 style="color:rgb(10, 10, 10);">Your Complaints</h3>
+
+      <hr>
+      <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Compliant</th><th>Status</th><th>Email</th><th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of crs, let i =index">
+                <td>{{i+1}}</td>
+                <td>{{p.complaint}}</td>
+                <td>{{p.status}}</td>
+                <td>{{p.useremail}}</td>
+                <td>
+                    <a routerLink="/usermain">
+                        <button class="btn btn-danger">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a routerLink="/usermain">
+                        <button class="btn btn-success">Return</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        <router-outlet></router-outlet>   
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  

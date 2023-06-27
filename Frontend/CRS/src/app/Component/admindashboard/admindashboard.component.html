@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="card">
+        <div class="card text-bg-dark">
+         
+      
+          <div class="card-img-overlay">
+        <h1 style="color:rgb(19, 18, 18);">Welcome Admin</h1>
+        <h3 style="color:rgb(12, 12, 12);">CRS Application Progress below</h3>
+    
+        <ul class="nav " >
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/userlist" style="font-size: 20px; color: rgb(7, 6, 6);"> 
+                Customer List
+              </a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/addCustomer" style="font-size: 20px; color: rgb(29, 27, 27);">
+                Add-Customer
+              </a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/managerList" style="font-size: 20px; color: rgb(14, 12, 12);">
+                  Manager-List
+                </a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/addManager" style="font-size: 20px; color: rgb(2, 2, 2);">
+                  Add-Manager
+                </a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/engineerlist" style="font-size: 20px; color: rgb(7, 5, 5);">
+                  Engineer-List
+                </a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/addEngineer" style="font-size: 20px; color: rgb(12, 10, 10);">
+                  Add-Engineer
+                </a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+              <a class="nav-link" (click)="logout()" style="font-size: 20px; color: rgb(12, 9, 9);">
+               Logout
+              </a>
+          </li>&nbsp;&nbsp;
+            
+          </ul>
+          <router-outlet></router-outlet>   
+    </div>
+    </div>
+    </div>
+</div>
